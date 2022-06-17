@@ -1,0 +1,115 @@
+[
+    {
+        "id": "sd_iLNISHr7lUkRFVh2",
+        "type": "tab",
+        "createdDate": "2022-06-15T08:54:13.337Z",
+        "label": "LoginScreen",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "LoginScreenComponent"
+    },
+    {
+        "id": "sd_LfgtIOzfkLQ347kN",
+        "type": "OnInit",
+        "z": "sd_iLNISHr7lUkRFVh2",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_LfgtIOzfkLQ347kN",
+        "category": "Lifecycle Events",
+        "x": 85,
+        "y": 60,
+        "wires": [
+            [
+                "sd_lQ6rWt2z7svon9uZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "LoginScreenComponent"
+    },
+    {
+        "id": "sd_lQ6rWt2z7svon9uZ",
+        "type": "PageVariables",
+        "z": "sd_iLNISHr7lUkRFVh2",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "email",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": ""
+                }
+            },
+            {
+                "textIp": "password",
+                "typedIpValue": {
+                    "type": "str",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_lQ6rWt2z7svon9uZ",
+        "category": "Function",
+        "x": 225,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "LoginScreenComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_8mhnZzsBstVmZfwh",
+        "type": "PageStart",
+        "z": "sd_iLNISHr7lUkRFVh2",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "On Signin",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "onSignin",
+        "category": "General",
+        "x": 85,
+        "y": 200,
+        "wires": [
+            [
+                "sd_PApiJj2XVg4swR1I"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "LoginScreenComponent"
+    },
+    {
+        "id": "sd_PApiJj2XVg4swR1I",
+        "type": "Script",
+        "z": "sd_iLNISHr7lUkRFVh2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.password)\nconsole.log(page.email)",
+        "functionName": "sd_PApiJj2XVg4swR1I",
+        "category": "Function",
+        "x": 225,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "LoginScreenComponent",
+        "generated": true
+    }
+]

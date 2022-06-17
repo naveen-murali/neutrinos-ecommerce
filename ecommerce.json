@@ -1,0 +1,13 @@
+{
+    "displayName": "Ecommerce",
+    "appName": "ecommerce",
+    "description": "First application on the studio",
+    "lastModified": "2022-06-15T06:32:13.440Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2022-06-15T06:32:13.026Z",
+    "analyticsId": "98dee6af-8645-5cf0-7490-fc93e550afd6",
+    "createdStudioVersion": "8.4.0-beta.0"
+}

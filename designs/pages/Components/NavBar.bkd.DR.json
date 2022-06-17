@@ -1,0 +1,317 @@
+{
+    "183f1239-f067-d716-89d5-b5f3c2f3be32": {
+        "paletteKey": "NG-Toolbar",
+        "commentid": null,
+        "designerReference": [
+            {
+                "_key": "componentLabel",
+                "_value": "Toolbar",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": [
+                    "stick-top"
+                ],
+                "_type": "dav",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "color",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "content",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutAlign",
+                "_value": "space-between center",
+                "_type": "kv",
+                "_attrDef": "c"
+            },
+            {
+                "_key": "[class.mat-elevation-z2]",
+                "_value": "true",
+                "_type": "kv",
+                "_attrDef": "c"
+            }
+        ],
+        "3d81bb5d-e911-71fa-f4e0-1625c25a67ad": {
+            "paletteKey": "NG-button",
+            "parentEditorKey": "183f1239-f067-d716-89d5-b5f3c2f3be32",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "logo"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "buttonname",
+                    "_value": "ShopX",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "color",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "(click)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[disabled]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[disableRipple]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "type",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "routerLink",
+                    "_value": "/",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ]
+        },
+        "f097e08f-a0a8-ef3f-9909-2c435934572b": {
+            "paletteKey": "NG-MenuButton",
+            "parentEditorKey": "183f1239-f067-d716-89d5-b5f3c2f3be32",
+            "isCommented": "true",
+            "commentid": "1655283161428",
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "MenuName",
+                    "_value": "asdfa",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "color",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[matMenuTriggerFor]",
+                    "_value": "profileMenu",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ]
+        },
+        "d1f98f52-6d6c-85a3-25dc-1f105c25c1a2": {
+            "paletteKey": "NG-MiniFabButton",
+            "parentEditorKey": "183f1239-f067-d716-89d5-b5f3c2f3be32",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fabicon",
+                    "_value": "person",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "color",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "(click)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[disabled]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[disableRipple]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "type",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "routerLink",
+                    "_value": "/login",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ]
+        }
+    },
+    "565c93e0-8784-8aac-dc7b-7d5118a82206": {
+        "paletteKey": "NG-Menu",
+        "commentid": null,
+        "designerReference": [
+            {
+                "_key": "componentLabel",
+                "_value": "Menu",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "dav",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "xPosition",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "yPosition",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "matMenu",
+                "_value": "profileMenu",
+                "_type": "vk",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "hasBackdrop",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "overlapTrigger",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "(closed)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "10488f94-3c7c-5b3a-c674-86816f745b3a": {
+            "paletteKey": "NG-MenuItem",
+            "parentEditorKey": "565c93e0-8784-8aac-dc7b-7d5118a82206",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "Menu Item",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "MenuItemName",
+                    "_value": "Profile",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "(click)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[disabled]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ]
+        }
+    }
+}

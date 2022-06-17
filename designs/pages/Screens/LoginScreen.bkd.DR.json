@@ -1,0 +1,926 @@
+{
+    "48f634cd-790e-a3fe-191f-4f7f31fb558e": {
+        "paletteKey": "NEUTRINOS_VIEW_NavBar",
+        "commentid": null,
+        "designerReference": [
+            {
+                "_key": "componentLabel",
+                "_value": "NavBar",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "dav",
+                "_attrDef": "p"
+            }
+        ]
+    },
+    "49159993-bcb3-73a4-cc9f-a9465030373c": {
+        "paletteKey": "Html5",
+        "isAdvancedComponent": true,
+        "commentid": null,
+        "designerReference": [
+            {
+                "_key": "style",
+                "_value": "padding-top: 10rem; padding-bottom: 10rem",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "dav",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "htmlElement",
+                "_value": "div",
+                "_type": "dav",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "tagType",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "name",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "sandbox",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "src",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "srcdoc",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "width",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "[autoplay]",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "[loop]",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "data",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "audioSource",
+                "_value": [],
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "videoSource",
+                "_value": [],
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "audioDatasource",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "audioSrc",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "audioType",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "videoDatasource",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "videoSrc",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "videoType",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(audioplay)",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(videoplay)",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(audiopause)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(videopause)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(audioended)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "(videoended)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_visibility": false
+            },
+            {
+                "_key": "fxLayout",
+                "_value": "row",
+                "_type": "kv",
+                "_attrDef": "c"
+            },
+            {
+                "_key": "fxLayoutAlign",
+                "_value": "center",
+                "_type": "kv",
+                "_attrDef": "c"
+            }
+        ],
+        "bbe05070-f2ee-b8da-4811-b514df022d8f": {
+            "paletteKey": "ad-card",
+            "parentEditorKey": "49159993-bcb3-73a4-cc9f-a9465030373c",
+            "isAdvancedComponent": true,
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "Card",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "padding: 2rem !important;",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "tabindex",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxFlex.gt-md",
+                    "_value": "30%",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                },
+                {
+                    "_key": "fxFlex.md",
+                    "_value": "40%",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                },
+                {
+                    "_key": "fxFlex.sm",
+                    "_value": "50%",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                },
+                {
+                    "_key": "fxFlex.lt-sm",
+                    "_value": "100%",
+                    "_type": "kv",
+                    "_attrDef": "c"
+                }
+            ],
+            "ed58fbd8-a280-d367-9db2-8c7aab04b999": {
+                "paletteKey": "ng-card-title",
+                "parentEditorKey": "bbe05070-f2ee-b8da-4811-b514df022d8f",
+                "isAdvancedChildComponent": true,
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": [
+                            "mb-1"
+                        ],
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "Title",
+                        "_value": "SignIn",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "align",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ]
+            },
+            "6b3a4eb8-0d8b-c216-fbf0-ab0f0bff438c": {
+                "paletteKey": "ng-card-content",
+                "parentEditorKey": "bbe05070-f2ee-b8da-4811-b514df022d8f",
+                "isAdvancedChildComponent": true,
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "align",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ],
+                "4dd55184-e2c3-75f5-0a47-879b9613b63a": {
+                    "paletteKey": "NG-Form",
+                    "parentEditorKey": "6b3a4eb8-0d8b-c216-fbf0-ab0f0bff438c",
+                    "commentid": null,
+                    "designerReference": [
+                        {
+                            "_key": "componentLabel",
+                            "_value": "Form",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_useAsLabel": true
+                        },
+                        {
+                            "_key": "style",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "dav",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "action",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "method",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "target",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "(ngSubmit)",
+                            "_value": "__serviceInvoker__.invoke('sd_LRkQE69DI7XAP8D9', 'signIn', page.email,page.password)",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_customAttributeFlag": "flowpicker",
+                            "objValue": {
+                                "nodeID": "sd_eupiMeoTEFG5WM7C",
+                                "functionName": "signIn",
+                                "activeTree": "services",
+                                "z": "sd_LRkQE69DI7XAP8D9",
+                                "serviceId": "sd_LRkQE69DI7XAP8D9",
+                                "input": [
+                                    "page.email",
+                                    "page.password"
+                                ]
+                            }
+                        },
+                        {
+                            "_key": "(reset)",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "#signinForm",
+                            "_value": "ngForm",
+                            "_type": "kv",
+                            "_attrDef": "c"
+                        }
+                    ],
+                    "741fb09d-d19c-7e13-7f25-f1a493352ed8": {
+                        "paletteKey": "NG-Input",
+                        "parentEditorKey": "4dd55184-e2c3-75f5-0a47-879b9613b63a",
+                        "isAdvancedComponent": true,
+                        "isCommented": "false",
+                        "commentid": null,
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "width: 100%;",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "placeholder",
+                                "_value": "Ex. pat@example.com",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "value",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[appearance]",
+                                "_value": "'standard'",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[required]",
+                                "_value": "true",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[(ngModel)]",
+                                "_value": "page.email",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "name",
+                                "_value": "email",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "type",
+                                "_value": "email",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[formControl]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_customAttributeFlag": "flowpicker"
+                            },
+                            {
+                                "_key": "readonly",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disabled]",
+                                "_value": "false",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "id",
+                                "_value": "emailInput",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[floatLabel]",
+                                "_value": "'auto'",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[hideRequiredMarker]",
+                                "_value": "false",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_complexity": "advanced"
+                            },
+                            {
+                                "_key": "matError",
+                                "_value": [
+                                    {
+                                        "input1": "emailInput.invalid && emailInput.touched && emailInput.errors && emailInput.errors['required']",
+                                        "input2": "email is required",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    },
+                                    {
+                                        "input1": "emailInput.invalid && emailInput.touched && emailInput.errors && emailInput.errors['email']",
+                                        "input2": "please enter valid email address",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    }
+                                ],
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "inputHint",
+                                "_value": [],
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Label",
+                                "_value": "Email",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Suffix Icon",
+                                "_value": "alternate_email",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "(suffixIconClick)",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Prefix Icon",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "(prefixIconClick)",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Prefix",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Suffix",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "matInput",
+                                "_value": "matInput",
+                                "_type": "a",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "#emailInput",
+                                "_value": "ngModel",
+                                "_type": "kv",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "ngModel",
+                                "_value": "ngModel",
+                                "_type": "a",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "email",
+                                "_value": "email",
+                                "_type": "a",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "required",
+                                "_value": "required",
+                                "_type": "a",
+                                "_attrDef": "c"
+                            }
+                        ]
+                    },
+                    "331ba0fb-1540-4047-a304-6d25404c8b3b": {
+                        "paletteKey": "NG-Input",
+                        "parentEditorKey": "4dd55184-e2c3-75f5-0a47-879b9613b63a",
+                        "isAdvancedComponent": true,
+                        "commentid": null,
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "width: 100%;",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "placeholder",
+                                "_value": "Password",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "value",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[appearance]",
+                                "_value": "'standard'",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[required]",
+                                "_value": "true",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[(ngModel)]",
+                                "_value": "page.password",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "name",
+                                "_value": "password",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "type",
+                                "_value": "password",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[formControl]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "readonly",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disabled]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "id",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[floatLabel]",
+                                "_value": "'auto'",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[hideRequiredMarker]",
+                                "_value": "false",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_complexity": "advanced"
+                            },
+                            {
+                                "_key": "matError",
+                                "_value": [
+                                    {
+                                        "input1": "passwordInput.invalid && passwordInput.touched && passwordInput.errors && passwordInput.errors['required']",
+                                        "input2": "password is required",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    },
+                                    {
+                                        "input1": "passwordInput.invalid && passwordInput.touched && passwordInput.errors && passwordInput.errors['minlength']",
+                                        "input2": "min-length should be 5",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    }
+                                ],
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "inputHint",
+                                "_value": [
+                                    {
+                                        "input1": "!passwordInput.invalid",
+                                        "input2": "password should have min 6 alpha-numeric value",
+                                        "toggle": {
+                                            "toggleData": [],
+                                            "selected": "start"
+                                        }
+                                    }
+                                ],
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Label",
+                                "_value": "Password",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Suffix Icon",
+                                "_value": "lock",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "(suffixIconClick)",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Prefix Icon",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "(prefixIconClick)",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Prefix",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "Suffix",
+                                "_value": "",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_visibility": true
+                            },
+                            {
+                                "_key": "matInput",
+                                "_value": "matInput",
+                                "_type": "a",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "#passwordInput",
+                                "_value": "ngModel",
+                                "_type": "kv",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "ngModel",
+                                "_value": "ngModel",
+                                "_type": "a",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "required",
+                                "_value": "required",
+                                "_type": "a",
+                                "_attrDef": "c"
+                            },
+                            {
+                                "_key": "minlength",
+                                "_value": "5",
+                                "_type": "kv",
+                                "_attrDef": "c"
+                            }
+                        ]
+                    },
+                    "01ee7fef-f79f-efa7-fed0-31ab10ad0971": {
+                        "paletteKey": "NG-RaisedButton",
+                        "parentEditorKey": "4dd55184-e2c3-75f5-0a47-879b9613b63a",
+                        "commentid": null,
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": [
+                                    "submit-buttom"
+                                ],
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "buttonname",
+                                "_value": "Signin",
+                                "_type": "a",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "color",
+                                "_value": "accent",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[disabled]",
+                                "_value": "signinForm.invalid",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_customAttributeFlag": "customInput"
+                            },
+                            {
+                                "_key": "[disableRipple]",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "type",
+                                "_value": "submit",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "routerLink",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<div class="product-card p-0-5">
+  <mat-card>
+    <img mat-card-image routerLink="/product/id" class="cursor-pointer" [src]="product.image[0]">
+
+    <mat-card-subtitle class="mb-0 in-sigle-line cursor-pointer" routerLink="/product/id">{{product.name}}</mat-card-subtitle>
+
+    <mat-card-content>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" class="mb-1" fxLayoutAlign="start center" [fxShow]="true">
+          <bh-Rating style="margin-right: 0.5rem;" [rating]="product.rating"></bh-Rating><span>
+                ( {{ product.numReviews }} Reviews )</span>
+        </div><span style="font-weight:600;">
+        {{ product.price | currency: &quot;INR&quot; }}</span>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions fxLayoutAlign="space-between" style="padding: 0.5rem;">
+      <mat-icon class="card-icon icon cursor-pointer" (click)="toggleFavIcon()" mat-icon-button color="{{page.inWishlist &amp;&amp; &apos;primary&apos;}}">favorite</mat-icon>
+      <mat-icon class="card-icon cursor-pointer">shopping_cart</mat-icon>
+    </mat-card-actions>
+  </mat-card>
+</div>

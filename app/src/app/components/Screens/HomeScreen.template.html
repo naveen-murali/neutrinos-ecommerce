@@ -1,0 +1,6 @@
+<bh-NavBar></bh-NavBar>
+<div style="padding: 1rem;">
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" fxLayout.xs="column">
+    <bh-Product fxFlex.lt-sm="100" fxFlex.sm="{{ 100 / 2 }}" fxFlex.md="{{ 100 / 4 }}" fxFlex.gt-md="{{ 100 / 6 }}" *ngFor="let product of page.products" [product]="product"></bh-Product>
+  </div>
+</div>

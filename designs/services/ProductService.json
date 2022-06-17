@@ -1,0 +1,236 @@
+[
+    {
+        "id": "sd_fcayquMyZ58eyZyP",
+        "type": "tab",
+        "createdDate": "2022-06-15T09:09:30.413Z",
+        "label": "ProductService",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "ProductService",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_BrZLLp4ob67CpKw7",
+        "type": "Start",
+        "z": "sd_fcayquMyZ58eyZyP",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Fetch Products Flow",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "products",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "true"
+                },
+                "output": true
+            },
+            {
+                "key": "productExist",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "this.products?.length || false"
+                },
+                "output": false
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "fetchProductsFlow",
+        "category": "General",
+        "x": 165,
+        "y": 60,
+        "wires": [
+            [
+                "sd_sPw3EKBCo4JZlibK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ProductService"
+    },
+    {
+        "id": "sd_PE4YpndhH60sKV9V",
+        "type": "Start",
+        "z": "sd_fcayquMyZ58eyZyP",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Get Products Flow",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "products",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "this.products || []"
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "getProductsFlow",
+        "category": "General",
+        "x": 165,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ProductService"
+    },
+    {
+        "id": "sd_sGclF6kqm0mvxwmB",
+        "type": "HttpRequest",
+        "z": "sd_fcayquMyZ58eyZyP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Fetch Products",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "__csd__env__bh.system.environment.properties.GET_PRODUCTS_API__csd__env__end",
+        "urlMappingObj": {
+            "mapVarType": "environment",
+            "mapVarValue": "GET_PRODUCTS_API"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "fetchProducts",
+        "category": "HTTP",
+        "x": 525,
+        "y": 120,
+        "wires": [
+            [
+                "sd_UzKF0oi3bkijvX1A"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProductService",
+        "generated": true
+    },
+    {
+        "id": "sd_UzKF0oi3bkijvX1A",
+        "type": "ServiceVariables",
+        "z": "sd_fcayquMyZ58eyZyP",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "products",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": "result.products"
+                }
+            }
+        ],
+        "functionName": "sd_UzKF0oi3bkijvX1A",
+        "category": "Function",
+        "x": 625,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProductService",
+        "generated": true
+    },
+    {
+        "id": "sd_v5m2p4M2HEywZ5gs",
+        "type": "Switch",
+        "z": "sd_fcayquMyZ58eyZyP",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Check Product Exists",
+        "property": "productExist",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.productExist",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "checkProductExists",
+        "category": "Function",
+        "x": 405,
+        "y": 60,
+        "wires": [
+            [],
+            [
+                "sd_sGclF6kqm0mvxwmB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProductService",
+        "generated": true
+    },
+    {
+        "id": "sd_sPw3EKBCo4JZlibK",
+        "type": "ServiceVariables",
+        "z": "sd_fcayquMyZ58eyZyP",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "products",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "this.products || []"
+                }
+            }
+        ],
+        "functionName": "sd_sPw3EKBCo4JZlibK",
+        "category": "Function",
+        "x": 285,
+        "y": 60,
+        "wires": [
+            [
+                "sd_v5m2p4M2HEywZ5gs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProductService",
+        "generated": true
+    }
+]

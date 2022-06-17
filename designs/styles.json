@@ -1,0 +1,19 @@
+{
+    "classes": [
+        "stick-top",
+        "logo",
+        "cursor-pointer",
+        "p-0-5",
+        "p-1",
+        "p-0",
+        "mb-0",
+        "mb-1",
+        "in-sigle-line",
+        "product-card",
+        "wishlit",
+        "card-icon",
+        "submit-buttom",
+        "error-alert",
+        "success-alert"
+    ]
+}

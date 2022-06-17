@@ -1,0 +1,375 @@
+[
+    {
+        "id": "sd_LRkQE69DI7XAP8D9",
+        "type": "tab",
+        "createdDate": "2022-06-15T09:08:28.960Z",
+        "label": "AuthService",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "AuthService",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_eupiMeoTEFG5WM7C",
+        "type": "Start",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "SignIn",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "email",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "password",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "signIn",
+        "category": "General",
+        "x": 65,
+        "y": 60,
+        "wires": [
+            [
+                "sd_yktOb0IDECjktcvG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "AuthService"
+    },
+    {
+        "id": "sd_TcJF1GMN5ZBj1tq5",
+        "type": "ServiceVariables",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "userDetails",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "userDetails"
+                }
+            }
+        ],
+        "functionName": "sd_TcJF1GMN5ZBj1tq5",
+        "category": "Function",
+        "x": 385,
+        "y": 60,
+        "wires": [
+            [
+                "sd_KfgFtIuCnFNPLgpc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_QExZhaFED4qPVAzM",
+        "type": "HttpRequest",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "POST api_users",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "__csd__env__bh.system.environment.properties. SIGNIN_API__csd__env__end",
+        "urlMappingObj": {
+            "mapVarType": "environment",
+            "mapVarValue": " SIGNIN_API"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.local.userDetails",
+        "reqBodyObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "userDetails"
+        },
+        "resultMapping": "bh.userDetails",
+        "resultMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "userDetails"
+        },
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "headersObj": [
+            {
+                "key": "Content-Type",
+                "defaultValue": "application/json"
+            }
+        ],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "pOSTApi_users",
+        "category": "HTTP",
+        "x": 265,
+        "y": 60,
+        "wires": [
+            [
+                "sd_TcJF1GMN5ZBj1tq5"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_O5jU4FOgoj9zCXTD",
+        "type": "Script",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(this.userDetails);\nconsole.log(bh)\n\nbh.successMessage = `Hi, ${bh.userDetails.name}`\n",
+        "functionName": "sd_O5jU4FOgoj9zCXTD",
+        "category": "Function",
+        "x": 605,
+        "y": 60,
+        "wires": [
+            [
+                "sd_bp5WLsvqZZKMq7oK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_yktOb0IDECjktcvG",
+        "type": "Script",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.userDetails = bh.input\n",
+        "functionName": "sd_yktOb0IDECjktcvG",
+        "category": "Function",
+        "x": 165,
+        "y": 60,
+        "wires": [
+            [
+                "sd_QExZhaFED4qPVAzM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_bsANEIqajvt0yiDZ",
+        "type": "Catch",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "SignIn Catch",
+        "selectedNodes": [
+            "sd_eupiMeoTEFG5WM7C"
+        ],
+        "selectCatchType": "selectednodes",
+        "masternodeList": "",
+        "ignoreList": "",
+        "functionName": "signInCatch",
+        "category": "General",
+        "x": 265,
+        "y": 160,
+        "wires": [
+            [
+                "sd_IrWKuju7ikQP6lhY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "AuthService"
+    },
+    {
+        "id": "sd_IrWKuju7ikQP6lhY",
+        "type": "CallService",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_rYc305z7WFjceXh0",
+            "type": "tab",
+            "createdDate": "2022-06-17T10:36:10.296Z",
+            "label": "AlertService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_l5vqWgRi6Zokyk0J",
+            "flowName": "showErrorAlert"
+        },
+        "inputVariables": [
+            {
+                "key": "message",
+                "map": true,
+                "valueType": "bh",
+                "value": "error.error.message"
+            }
+        ],
+        "bhVariables": [],
+        "outputMapping": [],
+        "callService": "./AlertService",
+        "startName": "showErrorAlert",
+        "inputParams": [
+            "bh.error.error.message"
+        ],
+        "accept_bh": false,
+        "functionName": "sd_IrWKuju7ikQP6lhY",
+        "category": "General",
+        "x": 385,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_bp5WLsvqZZKMq7oK",
+        "type": "CallService",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_rYc305z7WFjceXh0",
+            "type": "tab",
+            "createdDate": "2022-06-17T10:36:10.296Z",
+            "label": "AlertService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_U8gv03p0ho8Vxt4Z",
+            "flowName": "showSuccessAlert"
+        },
+        "inputVariables": [
+            {
+                "key": "message",
+                "map": true,
+                "valueType": "bh",
+                "value": "successMessage"
+            }
+        ],
+        "bhVariables": [],
+        "outputMapping": [],
+        "callService": "./AlertService",
+        "startName": "showSuccessAlert",
+        "inputParams": [
+            "bh.successMessage"
+        ],
+        "accept_bh": false,
+        "functionName": "sd_bp5WLsvqZZKMq7oK",
+        "category": "General",
+        "x": 705,
+        "y": 60,
+        "wires": [
+            [
+                "sd_5ODSl4CEHEmVGyGo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_KfgFtIuCnFNPLgpc",
+        "type": "Storage",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {
+            "type": "bh",
+            "value": "userDetails"
+        },
+        "resultMapping": {},
+        "functionName": "sd_KfgFtIuCnFNPLgpc",
+        "category": "Storage",
+        "x": 500,
+        "y": 60,
+        "wires": [
+            [
+                "sd_O5jU4FOgoj9zCXTD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_5ODSl4CEHEmVGyGo",
+        "type": "Navigation",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Navigate to Home",
+        "path": "/home",
+        "functionName": "navigateToHome",
+        "category": "Navigation",
+        "x": 825,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    }
+]

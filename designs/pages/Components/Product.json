@@ -1,0 +1,131 @@
+[
+    {
+        "id": "sd_RujMaKHpxFUAqkh2",
+        "type": "tab",
+        "createdDate": "2022-06-15T08:56:36.311Z",
+        "label": "Product",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "ProductComponent"
+    },
+    {
+        "id": "sd_JBfQDnpahqsN9TaB",
+        "type": "OnInit",
+        "z": "sd_RujMaKHpxFUAqkh2",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [
+            {
+                "key": "product",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "{}"
+                }
+            }
+        ],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [
+            {
+                "key": "inWishlist",
+                "defaultValue": {
+                    "type": "bool",
+                    "value": "false"
+                }
+            }
+        ],
+        "functionName": "sd_JBfQDnpahqsN9TaB",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 40,
+        "wires": [
+            [
+                "sd_p3GsEppgencU5PFU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ProductComponent"
+    },
+    {
+        "id": "sd_p3GsEppgencU5PFU",
+        "type": "PageVariables",
+        "z": "sd_RujMaKHpxFUAqkh2",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_p3GsEppgencU5PFU",
+        "category": "Function",
+        "x": 185,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProductComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_YmR7C5MqPpbgH8KV",
+        "type": "PageStart",
+        "z": "sd_RujMaKHpxFUAqkh2",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Toggle FavIcon",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "toggleFavIcon",
+        "category": "General",
+        "x": 65,
+        "y": 140,
+        "wires": [
+            [
+                "sd_pMaSf9HT11uUWAuU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ProductComponent"
+    },
+    {
+        "id": "sd_pMaSf9HT11uUWAuU",
+        "type": "PageVariables",
+        "z": "sd_RujMaKHpxFUAqkh2",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "inWishlist",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "!this.page.inWishlist"
+                }
+            }
+        ],
+        "functionName": "sd_pMaSf9HT11uUWAuU",
+        "category": "Function",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProductComponent",
+        "generated": true
+    }
+]

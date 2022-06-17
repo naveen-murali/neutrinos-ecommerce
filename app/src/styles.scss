@@ -1,0 +1,106 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+@import "nDefaults.scss";
+
+body{
+    background-color: #303030 !important;
+}
+
+.stick-top{
+    position: sticky;
+    top: 0;
+    z-index: 101;
+}
+
+.logo{
+    font-size: 1.2rem; 
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.cursor-pointer{
+    cursor: pointer !important;
+}
+
+.p-0-5{
+    padding: 0.5rem !important;
+}
+
+.p-1{
+    padding: 1rem !important;
+}
+
+.p-0{
+    padding: 0 !important;
+}
+
+.mb-0{
+    margin-bottom: 0 !important;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.in-sigle-line {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-card{
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.product-card:hover{
+    transform: scale(1.02);
+}
+
+.wishlit{
+    color: red;
+}
+
+.card-icon{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transform: scale(1);
+    transition: 0.2s ease;
+}
+
+.card-icon:hover{
+    transform: scale(1.2);
+}
+
+.submit-buttom{
+    margin-top: 1rem !important;
+    padding-left: 2rem !important; 
+    padding-right: 2rem !important;
+    font-weight: 500;
+}
+
+.error-alert{
+    color: #842029 !important;
+    background-color: #f8d7da !important;
+    border-color: #f5c2c7 !important;
+    z-index: 1002;
+}
+.error-alert button{
+    color: #842029;
+}
+
+.success-alert{
+    color: #055160 !important;
+    background-color: #cff4fc !important;
+    border-color: #b6effb !important;
+    z-index: 1002 !important;
+    opacity: 0.8 !important;
+}
+.success-alert button{
+    color: #055160;
+}

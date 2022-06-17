@@ -1,0 +1,95 @@
+[
+    {
+        "id": "sd_ZrehXcpYb4FTA7yd",
+        "type": "tab",
+        "createdDate": "2022-06-15T06:33:17.456Z",
+        "label": "HomeScreen",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "HomeScreenComponent"
+    },
+    {
+        "id": "sd_3aMmbc7bhGDGH0Sa",
+        "type": "OnInit",
+        "z": "sd_ZrehXcpYb4FTA7yd",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_3aMmbc7bhGDGH0Sa",
+        "category": "Lifecycle Events",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "sd_U32lsY0CsMnseZ2C"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "HomeScreenComponent"
+    },
+    {
+        "id": "sd_U32lsY0CsMnseZ2C",
+        "type": "PageServiceVariables",
+        "z": "sd_ZrehXcpYb4FTA7yd",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "Product Service",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "get",
+        "globalVariables": [
+            {
+                "textIp": "products",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "products"
+                }
+            }
+        ],
+        "functionName": "productService",
+        "service": {
+            "id": "sd_fcayquMyZ58eyZyP",
+            "type": "tab",
+            "createdDate": "2022-06-15T09:09:30.413Z",
+            "label": "ProductService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client",
+            "generateNext": true,
+            "serviceName": "ProductService",
+            "relativeParentPath": "",
+            "_def": {
+                "defaults": {
+                    "label": {
+                        "value": ""
+                    },
+                    "disabled": {
+                        "value": false
+                    },
+                    "info": {
+                        "value": ""
+                    }
+                }
+            }
+        },
+        "serviceImportPath": "app/sd-services/ProductService",
+        "category": "Function",
+        "x": 440,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "HomeScreenComponent",
+        "generated": true
+    }
+]

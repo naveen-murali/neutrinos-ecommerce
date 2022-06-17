@@ -1,0 +1,373 @@
+[
+    {
+        "id": "sd_oIgn4I3y9zhUVzcr",
+        "type": "tab",
+        "createdDate": "2022-06-16T08:25:50.375Z",
+        "label": "Rating",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "RatingComponent"
+    },
+    {
+        "id": "sd_kpav9xEs0VRvZ45L",
+        "type": "OnInit",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [
+            {
+                "key": "rating",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "0"
+                }
+            }
+        ],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [
+            {
+                "key": "starRating",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "[]"
+                }
+            }
+        ],
+        "functionName": "sd_kpav9xEs0VRvZ45L",
+        "category": "Lifecycle Events",
+        "x": 85,
+        "y": 60,
+        "wires": [
+            [
+                "sd_7kydTR9wxNGAwXTV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "RatingComponent"
+    },
+    {
+        "id": "sd_kr8mLd58wiCDXDSo",
+        "type": "Script",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Set Star Rating",
+        "script": "this.rating = page.newBase\n  ? (this.rating / page.currentBase) * page.newBase\n  : this.rating;\n  \npage.before = Math.floor(this.rating);\npage.after = (this.rating % 1) * 100;",
+        "functionName": "setStarRating",
+        "category": "Function",
+        "x": 345,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "RatingComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7kydTR9wxNGAwXTV",
+        "type": "PageVariables",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "Set Variables",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "rating",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "0"
+                }
+            },
+            {
+                "textIp": "currentBase",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "5"
+                }
+            },
+            {
+                "textIp": "newBase",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "0"
+                }
+            },
+            {
+                "textIp": "before",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "0"
+                }
+            },
+            {
+                "textIp": "after",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "0"
+                }
+            }
+        ],
+        "functionName": "setVariables",
+        "category": "Function",
+        "x": 205,
+        "y": 60,
+        "wires": [
+            [
+                "sd_kr8mLd58wiCDXDSo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "RatingComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_J4cMqSjHe5rgJSZn",
+        "type": "PageStart",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Get Rating",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "position",
+                "defaultValue": {
+                    "type": "num",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "rating",
+                "defaultValue": {
+                    "type": "str",
+                    "value": "0%"
+                },
+                "output": true
+            }
+        ],
+        "flow_type": "sync",
+        "functionName": "getRating",
+        "category": "General",
+        "x": 85,
+        "y": 300,
+        "wires": [
+            [
+                "sd_Mkr6yfLjyGbEBlyy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "RatingComponent"
+    },
+    {
+        "id": "sd_pVuy9iHnd5nW1Fcy",
+        "type": "PageStart",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Get Star Count",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "starCount",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "[]"
+                },
+                "output": true
+            }
+        ],
+        "flow_type": "sync",
+        "functionName": "getStarCount",
+        "category": "General",
+        "x": 85,
+        "y": 180,
+        "wires": [
+            [
+                "sd_s4gSgadFUHOOLU0h"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "RatingComponent"
+    },
+    {
+        "id": "sd_9NcqFlMsOmsSFmwt",
+        "type": "PageStart",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Get Id",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "position",
+                "defaultValue": {
+                    "type": "num",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "flow_type": "sync",
+        "functionName": "getId",
+        "category": "General",
+        "x": 405,
+        "y": 180,
+        "wires": [
+            [
+                "sd_7ixKPIMeqvo6JPj0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "RatingComponent"
+    },
+    {
+        "id": "sd_SqXqxuCpsVd2B4AW",
+        "type": "PageStart",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Get Fill",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "position",
+                "defaultValue": {
+                    "type": "num",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "fill",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "flow_type": "sync",
+        "functionName": "getFill",
+        "category": "General",
+        "x": 405,
+        "y": 300,
+        "wires": [
+            [
+                "sd_ujLU9ipHHuPBaZJ0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "RatingComponent"
+    },
+    {
+        "id": "sd_Mkr6yfLjyGbEBlyy",
+        "type": "Script",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Set Rating Script",
+        "script": "const position = bh.input.position\n\nbh.local.rating = page.before > position\n    ? '100%'\n    : page.before === position\n        ? `${page.after}%`\n        : '0%';",
+        "functionName": "setRatingScript",
+        "category": "Function",
+        "x": 245,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "RatingComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_s4gSgadFUHOOLU0h",
+        "type": "Script",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Get Star Count Script",
+        "script": "bh.local.starCount = new Array(page.newBase || page.currentBase);",
+        "functionName": "getStarCountScript",
+        "category": "Function",
+        "x": 245,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "RatingComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ujLU9ipHHuPBaZJ0",
+        "type": "Script",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Get Fill Script",
+        "script": "const position = bh.input.position;\nbh.local.fill = `url(#${this.getId(position)})`;",
+        "functionName": "getFillScript",
+        "category": "Function",
+        "x": 565,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "RatingComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_7ixKPIMeqvo6JPj0",
+        "type": "Script",
+        "z": "sd_oIgn4I3y9zhUVzcr",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Get Id Script",
+        "script": "const position = bh.input.position;\n\nbh.local.id = `${this.rating}-${position}-ratingGradiant`;",
+        "functionName": "getIdScript",
+        "category": "Function",
+        "x": 565,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "RatingComponent",
+        "generated": true
+    }
+]

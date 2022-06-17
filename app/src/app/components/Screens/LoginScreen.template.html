@@ -1,0 +1,26 @@
+<bh-NavBar></bh-NavBar>
+<div fxLayout="row" fxLayoutAlign="center" style="padding-top: 10rem; padding-bottom: 10rem">
+  <mat-card fxFlex.gt-md="30%" fxFlex.md="40%" fxFlex.sm="50%" fxFlex.lt-sm="100%" style="padding: 2rem !important;">
+    <mat-card-title class="mb-1">SignIn</mat-card-title>
+
+    <mat-card-content>
+      <form #signinForm="ngForm" (ngSubmit)="__serviceInvoker__.invoke(&apos;sd_LRkQE69DI7XAP8D9&apos;, &apos;signIn&apos;, page.email,page.password)">
+        <mat-form-field style="width: 100%;" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput [(ngModel)]="page.email" name="email" type="email" placeholder="Ex. pat@example.com" [required]="true" #emailInput="ngModel" ngModel email required [disabled]="false" id="emailInput">
+          <mat-error align="start" *ngIf="emailInput.invalid &amp;&amp; emailInput.touched &amp;&amp; emailInput.errors &amp;&amp; emailInput.errors[&apos;required&apos;]">email is required</mat-error>
+          <mat-error align="start" *ngIf="emailInput.invalid &amp;&amp; emailInput.touched &amp;&amp; emailInput.errors &amp;&amp; emailInput.errors[&apos;email&apos;]">please enter valid email address</mat-error>
+          <mat-label>Email</mat-label>
+          <mat-icon matSuffix>alternate_email</mat-icon>
+        </mat-form-field>
+        <mat-form-field style="width: 100%;" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput [(ngModel)]="page.password" name="password" type="password" placeholder="Password" [required]="true" #passwordInput="ngModel" ngModel required minlength="5">
+          <mat-error align="start" *ngIf="passwordInput.invalid &amp;&amp; passwordInput.touched &amp;&amp; passwordInput.errors &amp;&amp; passwordInput.errors[&apos;required&apos;]">password is required</mat-error>
+          <mat-error align="start" *ngIf="passwordInput.invalid &amp;&amp; passwordInput.touched &amp;&amp; passwordInput.errors &amp;&amp; passwordInput.errors[&apos;minlength&apos;]">min-length should be 5</mat-error>
+          <mat-hint align="start" *ngIf="!passwordInput.invalid">password should have min 6 alpha-numeric value</mat-hint>
+          <mat-label>Password</mat-label>
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field><button mat-raised-button class="submit-buttom" color="accent" [disabled]="signinForm.invalid" type="submit">Signin</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,30 @@
+{
+    "routes": [
+        {
+            "path": "home",
+            "component": "HomeScreenComponent",
+            "canActivate": {
+                "edited": true,
+                "value": ""
+            },
+            "resolve": {
+                "edited": true,
+                "value": "{ products: ProductResolver }"
+            }
+        },
+        {
+            "path": "login",
+            "component": "LoginScreenComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "/home",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}
