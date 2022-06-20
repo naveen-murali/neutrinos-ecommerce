@@ -3,6 +3,7 @@
 import * as sd_rYc305z7WFjceXh0 from 'app/sd-services/AlertService'; //_splitter_
 import * as sd_LRkQE69DI7XAP8D9 from 'app/sd-services/AuthService'; //_splitter_
 import * as sd_fcayquMyZ58eyZyP from 'app/sd-services/ProductService'; //_splitter_
+import * as sd_n4Yv9S5MlM5K5y7B from 'app/sd-services/WishlistService'; //_splitter_
 import { Injectable } from '@angular/core'; //_splitter_
 //append_imports_end
 @Injectable({ providedIn: 'root' })
@@ -10,7 +11,8 @@ export class __NEU_ServiceInvokerService__ {
   constructor(
     private sd_rYc305z7WFjceXh0: sd_rYc305z7WFjceXh0.AlertService,
     private sd_LRkQE69DI7XAP8D9: sd_LRkQE69DI7XAP8D9.AuthService,
-    private sd_fcayquMyZ58eyZyP: sd_fcayquMyZ58eyZyP.ProductService
+    private sd_fcayquMyZ58eyZyP: sd_fcayquMyZ58eyZyP.ProductService,
+    private sd_n4Yv9S5MlM5K5y7B: sd_n4Yv9S5MlM5K5y7B.WishlistService
   ) {}
   invoke(
     injectedServiceId: string,

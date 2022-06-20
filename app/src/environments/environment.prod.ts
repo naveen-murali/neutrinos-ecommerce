@@ -13,6 +13,7 @@ export const environment = {
         "NGFORAGE_MOBILE_DRIVER": "INDEXED_DB",
         "BASE_URL": "https://unityshop.shop/api",
         "GET_PRODUCTS_API": "https://unityshop.shop/api/products",
-        "SIGNIN_API": "http://localhost:3000/api/users/login"
+        "SIGNIN_API": "http://localhost:3000/api/users/login",
+        "WISHLIST_API": "http://localhost:3000/api/users/wishlists"
     }
 }

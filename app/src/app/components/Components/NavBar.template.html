@@ -1,4 +1,9 @@
-<mat-toolbar fxLayoutAlign="space-between center" [class.mat-elevation-z2]="true" class="stick-top"><button mat-button class="logo" routerLink="/">ShopX</button><button mat-mini-fab routerLink="/login">
+<mat-toolbar fxLayoutAlign="space-between center" [class.mat-elevation-z2]="true" class="stick-top"><button mat-button class="logo" routerLink="/">ShopX</button>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" [fxShow]="true" *ngIf="page.userDetails &amp;&amp; page.userDetails.token">
+    <mat-icon class="mr-1 no-selection cursor-pointer" [matBadge]="page.wishlist.count" routerLink="/wishlist" color="warn">favorite</mat-icon>
+    <mat-icon class="mr-1 no-selection cursor-pointer">shopping_cart</mat-icon><button mat-button [matMenuTriggerFor]="profileMenu">{{ page.userDetails &amp;&amp; page.userDetails.name }}</button>
+  </div><button mat-mini-fab routerLink="/login" *ngIf="!(page.userDetails &amp;&amp; page.userDetails.token)">
     <mat-icon>person</mat-icon>
-  </button></mat-toolbar>
-<mat-menu #profileMenu="matMenu"><button mat-menu-item> Profile </button></mat-menu>
+  </button>
+</mat-toolbar>
+<mat-menu #profileMenu="matMenu"><button mat-menu-item (click)="__serviceInvoker__.invoke(&apos;sd_LRkQE69DI7XAP8D9&apos;, &apos;logout&apos;)"> Logout <mat-icon>logout</mat-icon></button></mat-menu>

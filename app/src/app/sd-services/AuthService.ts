@@ -42,7 +42,7 @@ export class AuthService {
 
   //   service flows_AuthService
 
-  async signIn(email = '', password = '', ...others) {
+  async signInFlow(email = '', password = '', ...others) {
     try {
       var bh: any = {
         input: {
@@ -52,8 +52,8 @@ export class AuthService {
         local: {},
       };
       bh = this.sdService.__constructDefault(bh);
-      bh = await this.sd_yktOb0IDECjktcvG(bh);
-      //appendnew_next_signIn
+      bh = await this.pOSTApi_users(bh);
+      //appendnew_next_signInFlow
       return (
         // formatting output variables
         {
@@ -66,19 +66,53 @@ export class AuthService {
     }
   }
 
-  //appendnew_flow_AuthService_start
-
-  async sd_yktOb0IDECjktcvG(bh) {
+  async getUserDetails(...others) {
     try {
-      bh.local.userDetails = bh.input;
-
-      bh = await this.pOSTApi_users(bh);
-      //appendnew_next_sd_yktOb0IDECjktcvG
-      return bh;
+      var bh: any = {
+        input: {},
+        local: {
+          userDetails: this.userDetails || null,
+        },
+      };
+      bh = this.sdService.__constructDefault(bh);
+      bh = await this.getUserDetailsSwitch(bh);
+      //appendnew_next_getUserDetails
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {
+            userDetails: bh.local.userDetails,
+          },
+        }
+      );
     } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_yktOb0IDECjktcvG');
+      return await this.errorHandler(bh, e, 'sd_AnwjDpS3RjVNQNID');
     }
   }
+
+  async logout(...others) {
+    try {
+      var bh: any = {
+        input: {},
+        local: {},
+      };
+      bh = this.sdService.__constructDefault(bh);
+      bh = await this.logoutStorage(bh);
+      //appendnew_next_logout
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {},
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_22ATPDE6PJSqv7Ih');
+    }
+  }
+
+  //appendnew_flow_AuthService_start
 
   async pOSTApi_users(bh) {
     try {
@@ -88,7 +122,7 @@ export class AuthService {
         responseType: 'json',
         headers: { 'Content-Type': 'application/json' },
         params: {},
-        body: bh.local.userDetails,
+        body: bh.input,
       };
       bh.userDetails = await this.sdService.nHttpRequest(requestOptions);
       bh = await this.sd_TcJF1GMN5ZBj1tq5(bh);
@@ -102,7 +136,7 @@ export class AuthService {
   async sd_TcJF1GMN5ZBj1tq5(bh) {
     try {
       this.userDetails = bh.userDetails;
-      bh = await this.sd_KfgFtIuCnFNPLgpc(bh);
+      bh = await this.setUserDetailsStorage(bh);
       //appendnew_next_sd_TcJF1GMN5ZBj1tq5
       return bh;
     } catch (e) {
@@ -110,11 +144,11 @@ export class AuthService {
     }
   }
 
-  async sd_KfgFtIuCnFNPLgpc(bh) {
+  async setUserDetailsStorage(bh) {
     try {
       localStorage.setItem('user', JSON.stringify(bh.userDetails));
       bh = await this.sd_O5jU4FOgoj9zCXTD(bh);
-      //appendnew_next_sd_KfgFtIuCnFNPLgpc
+      //appendnew_next_setUserDetailsStorage
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_KfgFtIuCnFNPLgpc');
@@ -123,11 +157,7 @@ export class AuthService {
 
   async sd_O5jU4FOgoj9zCXTD(bh) {
     try {
-      console.log(this.userDetails);
-      console.log(bh);
-
       bh.successMessage = `Hi, ${bh.userDetails.name}`;
-
       bh = await this.sd_bp5WLsvqZZKMq7oK(bh);
       //appendnew_next_sd_O5jU4FOgoj9zCXTD
       return bh;
@@ -174,6 +204,101 @@ export class AuthService {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_IrWKuju7ikQP6lhY');
+    }
+  }
+
+  async getUserDetailsSwitch(bh) {
+    try {
+      if (
+        this.sdService.operators['null'](
+          bh.local.userDetails,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = await this.getDetailsStorage(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_GBqKEzG83kpS5Jfl');
+    }
+  }
+
+  async getDetailsStorage(bh) {
+    try {
+      bh.local.userDetails = JSON.parse(localStorage.getItem('user'));
+      bh = await this.checkUserDetails(bh);
+      //appendnew_next_getDetailsStorage
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_1pR0dwbw2kizF7K7');
+    }
+  }
+
+  async checkUserDetails(bh) {
+    try {
+      if (
+        this.sdService.operators['nempty'](
+          bh.local.userDetails,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = await this.sd_eAek2qm7Fs4Ei4lY(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_RmlM5CACaMvcn0jj');
+    }
+  }
+
+  async sd_eAek2qm7Fs4Ei4lY(bh) {
+    try {
+      this.userDetails = bh.local.userDetails;
+      //appendnew_next_sd_eAek2qm7Fs4Ei4lY
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_eAek2qm7Fs4Ei4lY');
+    }
+  }
+
+  async logoutStorage(bh) {
+    try {
+      localStorage.removeItem('user');
+      bh = await this.sd_BWhcVDoxUmCw3e41(bh);
+      //appendnew_next_logoutStorage
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_tNHOuJBthsXqyild');
+    }
+  }
+
+  async sd_BWhcVDoxUmCw3e41(bh) {
+    try {
+      this.userDetails = null;
+      bh = await this.sd_yIiMQnCYcWmCszIC(bh);
+      //appendnew_next_sd_BWhcVDoxUmCw3e41
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_BWhcVDoxUmCw3e41');
+    }
+  }
+
+  async sd_yIiMQnCYcWmCszIC(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/login');
+      await this.router.navigate([
+        this.sdService.formatPathWithParams(path, undefined),
+      ]);
+      //appendnew_next_sd_yIiMQnCYcWmCszIC
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_yIiMQnCYcWmCszIC');
     }
   }
 

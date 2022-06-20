@@ -4,7 +4,7 @@
     <mat-card-title class="mb-1">SignIn</mat-card-title>
 
     <mat-card-content>
-      <form #signinForm="ngForm" (ngSubmit)="__serviceInvoker__.invoke(&apos;sd_LRkQE69DI7XAP8D9&apos;, &apos;signIn&apos;, page.email,page.password)">
+      <form #signinForm="ngForm" (ngSubmit)="__serviceInvoker__.invoke(&apos;sd_LRkQE69DI7XAP8D9&apos;, &apos;signInFlow&apos;, page.email,page.password)">
         <mat-form-field style="width: 100%;" [appearance]="&apos;standard&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
           <input matInput [(ngModel)]="page.email" name="email" type="email" placeholder="Ex. pat@example.com" [required]="true" #emailInput="ngModel" ngModel email required [disabled]="false" id="emailInput">
           <mat-error align="start" *ngIf="emailInput.invalid &amp;&amp; emailInput.touched &amp;&amp; emailInput.errors &amp;&amp; emailInput.errors[&apos;required&apos;]">email is required</mat-error>

@@ -11,8 +11,9 @@ export const environment = {
         "isIDSEnabled": "false",
         "webAppMountpoint": "web",
         "NGFORAGE_MOBILE_DRIVER": "INDEXED_DB",
-        "BASE_URL": "https://unityshop.shop/api",
-        "GET_PRODUCTS_API": "https://unityshop.shop/api/products",
-        "SIGNIN_API": "http://localhost:3000/api/users/login"
+        "BASE_URL": "http://localhost:3000/api",
+        "GET_PRODUCTS_API": "http://localhost:3000/api/products",
+        "SIGNIN_API": "http://localhost:3000/api/users/login",
+        "WISHLIST_API": "http://localhost:3000/api/users/wishlists"
     }
 }

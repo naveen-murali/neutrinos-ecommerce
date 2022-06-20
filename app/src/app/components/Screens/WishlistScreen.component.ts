@@ -12,19 +12,16 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
-import { WishlistService } from 'app/sd-services/WishlistService'; //_splitter_
 //append_imports_end
 
 @Component({
-  selector: 'bh-Product',
-  templateUrl: './Product.template.html',
+  selector: 'bh-WishlistScreen',
+  templateUrl: './WishlistScreen.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class ProductComponent {
-  @Input('product')
-  public product: any = {};
+export class WishlistScreenComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -41,7 +38,7 @@ export class ProductComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_JBfQDnpahqsN9TaB(bh);
+      this.sd_qX9xTFerz5vdJ6Oy(bh);
     }
   }
 
@@ -50,44 +47,29 @@ export class ProductComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
 
-    Object.assign(this.page, { inWishlist: false });
+    Object.assign(this.page, {});
 
     //append_listeners
   }
 
-  sd_JBfQDnpahqsN9TaB(bh) {
+  sd_qX9xTFerz5vdJ6Oy(bh) {
     try {
-      bh = this.sd_PMRJNrd3LiDVU7pw(bh);
-      //appendnew_next_sd_JBfQDnpahqsN9TaB
+      bh = this.sd_W0aLjor351CYPLrB(bh);
+      //appendnew_next_sd_qX9xTFerz5vdJ6Oy
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_JBfQDnpahqsN9TaB');
+      return this.errorHandler(bh, e, 'sd_qX9xTFerz5vdJ6Oy');
     }
   }
 
-  //appendnew_flow_ProductComponent_start
+  //appendnew_flow_WishlistScreenComponent_start
 
-  sd_PMRJNrd3LiDVU7pw(bh) {
+  sd_W0aLjor351CYPLrB(bh) {
     try {
-      const WishlistServiceInstance: WishlistService =
-        this.__page_injector__.get(WishlistService);
-      this.page.wishlist = WishlistServiceInstance['wishlist'];
-      bh = this.sd_m4r2M53f0AEledHn(bh);
-      //appendnew_next_sd_PMRJNrd3LiDVU7pw
+      //appendnew_next_sd_W0aLjor351CYPLrB
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_PMRJNrd3LiDVU7pw');
-    }
-  }
-
-  sd_m4r2M53f0AEledHn(bh) {
-    try {
-      const page = this.page;
-      page.inWishlist = page.wishlist.list[this.product._id] ? true : false;
-      //appendnew_next_sd_m4r2M53f0AEledHn
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_m4r2M53f0AEledHn');
+      return this.errorHandler(bh, e, 'sd_W0aLjor351CYPLrB');
     }
   }
 
@@ -113,5 +95,5 @@ export class ProductComponent {
       throw e;
     }
   }
-  //appendnew_flow_ProductComponent_Catch
+  //appendnew_flow_WishlistScreenComponent_Catch
 }

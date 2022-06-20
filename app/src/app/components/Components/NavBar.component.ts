@@ -12,6 +12,8 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
+import { AuthService } from 'app/sd-services/AuthService'; //_splitter_
+import { WishlistService } from 'app/sd-services/WishlistService'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -54,7 +56,7 @@ export class NavBarComponent {
 
   sd_wf3OLClhKB9b7HqD(bh) {
     try {
-      bh = this.sd_dTTivHTBqQpYJq17(bh);
+      bh = this.sd_ZarG2ksw5qtJ51AB(bh);
       //appendnew_next_sd_wf3OLClhKB9b7HqD
       return bh;
     } catch (e) {
@@ -64,12 +66,28 @@ export class NavBarComponent {
 
   //appendnew_flow_NavBarComponent_start
 
-  sd_dTTivHTBqQpYJq17(bh) {
+  sd_ZarG2ksw5qtJ51AB(bh) {
     try {
-      //appendnew_next_sd_dTTivHTBqQpYJq17
+      const AuthServiceInstance: AuthService =
+        this.__page_injector__.get(AuthService);
+      this.page.userDetails = AuthServiceInstance['userDetails'];
+      bh = this.sd_UyTPs4ZbPiWT9bT1(bh);
+      //appendnew_next_sd_ZarG2ksw5qtJ51AB
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_dTTivHTBqQpYJq17');
+      return this.errorHandler(bh, e, 'sd_ZarG2ksw5qtJ51AB');
+    }
+  }
+
+  sd_UyTPs4ZbPiWT9bT1(bh) {
+    try {
+      const WishlistServiceInstance: WishlistService =
+        this.__page_injector__.get(WishlistService);
+      this.page.wishlist = WishlistServiceInstance['wishlist'];
+      //appendnew_next_sd_UyTPs4ZbPiWT9bT1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UyTPs4ZbPiWT9bT1');
     }
   }
 

@@ -106,14 +106,6 @@ export class ProductService {
   async checkProductExists(bh) {
     try {
       if (
-        this.sdService.operators['true'](
-          bh.local.productExist,
-          undefined,
-          undefined,
-          undefined
-        )
-      ) {
-      } else if (
         this.sdService.operators['false'](
           bh.local.productExist,
           undefined,

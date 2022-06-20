@@ -15,6 +15,18 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-ProductDetailsScreenComponent
+import { ProductDetailsScreenComponent } from '../components/Screens/ProductDetailsScreen.component';
+//CORE_REFERENCE_IMPORT-WishlistResolver
+import { WishlistResolver } from '../resolver/WishlistResolver.resolver';
+//CORE_REFERENCE_IMPORT-WishlistService
+import { WishlistService } from '../sd-services/WishlistService';
+//CORE_REFERENCE_IMPORT-AuthSignCanActivate
+import { AuthSignCanActivate } from '../canActivate/AuthSignCanActivate.canActivate';
+//CORE_REFERENCE_IMPORT-AuthCanActivate
+import { AuthCanActivate } from '../canActivate/AuthCanActivate.canActivate';
+//CORE_REFERENCE_IMPORT-WishlistScreenComponent
+import { WishlistScreenComponent } from '../components/Screens/WishlistScreen.component';
 //CORE_REFERENCE_IMPORT-AlertService
 import { AlertService } from '../sd-services/AlertService';
 //CORE_REFERENCE_IMPORT-RatingComponent
@@ -67,6 +79,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-ProductDetailsScreenComponent
+  ProductDetailsScreenComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-WishlistScreenComponent
+  WishlistScreenComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-RatingComponent
   RatingComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-SignupScreenComponent
@@ -96,8 +112,16 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
-//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-AlertService
-AlertService,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-WishlistResolver
+  WishlistResolver,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-WishlistService
+  WishlistService,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-AuthSignCanActivate
+  AuthSignCanActivate,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-AuthCanActivate
+  AuthCanActivate,
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-AlertService
+  AlertService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-ProductResolver
   ProductResolver,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-ProductService
@@ -115,9 +139,19 @@ export const appRoutes = [
   {
     path: 'home',
     component: HomeScreenComponent,
-    resolve: { products: ProductResolver },
+    resolve: { products: ProductResolver, wishlist: WishlistResolver },
+    canActivate: [AuthCanActivate],
   },
-  { path: 'login', component: LoginScreenComponent },
+  {
+    path: 'login',
+    component: LoginScreenComponent,
+    canActivate: [AuthSignCanActivate],
+  },
+  {
+    path: 'wishlist',
+    component: WishlistScreenComponent,
+    canActivate: [AuthCanActivate],
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
