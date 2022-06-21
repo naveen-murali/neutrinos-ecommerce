@@ -382,13 +382,13 @@
                         },
                         {
                             "_key": "(ngSubmit)",
-                            "_value": "__serviceInvoker__.invoke('sd_LRkQE69DI7XAP8D9', 'signIn', page.email,page.password)",
+                            "_value": "__serviceInvoker__.invoke('sd_LRkQE69DI7XAP8D9', 'signInFlow', page.email,page.password)",
                             "_type": "kv",
                             "_attrDef": "p",
                             "_customAttributeFlag": "flowpicker",
                             "objValue": {
                                 "nodeID": "sd_eupiMeoTEFG5WM7C",
-                                "functionName": "signIn",
+                                "functionName": "signInFlow",
                                 "activeTree": "services",
                                 "z": "sd_LRkQE69DI7XAP8D9",
                                 "serviceId": "sd_LRkQE69DI7XAP8D9",
@@ -415,7 +415,6 @@
                         "paletteKey": "NG-Input",
                         "parentEditorKey": "4dd55184-e2c3-75f5-0a47-879b9613b63a",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {

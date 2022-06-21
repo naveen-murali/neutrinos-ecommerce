@@ -19,11 +19,11 @@
         "name": "",
         "functionName": "sd_wf3OLClhKB9b7HqD",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 65,
+        "y": 40,
         "wires": [
             [
-                "sd_dTTivHTBqQpYJq17"
+                "sd_ZarG2ksw5qtJ51AB"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -31,20 +31,112 @@
         "serviceName": "NavBarComponent"
     },
     {
-        "id": "sd_dTTivHTBqQpYJq17",
-        "type": "PageVariables",
+        "id": "sd_ZarG2ksw5qtJ51AB",
+        "type": "PageServiceVariables",
         "z": "sd_QRzuYVIamsDTaCkW",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
         "inputs": 1,
         "outputs": 1,
-        "operation": "set",
-        "globalVariables": [],
-        "functionName": "sd_dTTivHTBqQpYJq17",
+        "operation": "get",
+        "globalVariables": [
+            {
+                "textIp": "userDetails",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "userDetails"
+                }
+            }
+        ],
+        "functionName": "sd_ZarG2ksw5qtJ51AB",
+        "service": {
+            "id": "sd_LRkQE69DI7XAP8D9",
+            "type": "tab",
+            "createdDate": "2022-06-15T09:08:28.960Z",
+            "label": "AuthService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client",
+            "generateNext": true,
+            "serviceName": "AuthService",
+            "relativeParentPath": "",
+            "_def": {
+                "defaults": {
+                    "label": {
+                        "value": ""
+                    },
+                    "disabled": {
+                        "value": false
+                    },
+                    "info": {
+                        "value": ""
+                    }
+                }
+            }
+        },
+        "serviceImportPath": "app/sd-services/AuthService",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 165,
+        "y": 40,
+        "wires": [
+            [
+                "sd_UyTPs4ZbPiWT9bT1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "NavBarComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UyTPs4ZbPiWT9bT1",
+        "type": "PageServiceVariables",
+        "z": "sd_QRzuYVIamsDTaCkW",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "get",
+        "globalVariables": [
+            {
+                "textIp": "wishlist",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "wishlist"
+                }
+            }
+        ],
+        "functionName": "sd_UyTPs4ZbPiWT9bT1",
+        "service": {
+            "type": "tab",
+            "id": "sd_n4Yv9S5MlM5K5y7B",
+            "disabled": false,
+            "info": "",
+            "label": "WishlistService",
+            "createdDate": "2022-06-20T08:36:27.289Z",
+            "functionSeq": 0,
+            "tabType": "client",
+            "_def": {
+                "defaults": {
+                    "label": {
+                        "value": ""
+                    },
+                    "disabled": {
+                        "value": false
+                    },
+                    "info": {
+                        "value": ""
+                    }
+                }
+            }
+        },
+        "serviceImportPath": "app/sd-services/WishlistService",
+        "category": "Function",
+        "x": 285,
+        "y": 40,
         "wires": [
             []
         ],

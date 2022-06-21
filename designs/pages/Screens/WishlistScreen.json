@@ -1,0 +1,56 @@
+[
+    {
+        "id": "sd_QPswhLZbyXfJVlYj",
+        "type": "tab",
+        "createdDate": "2022-06-20T05:11:09.277Z",
+        "label": "WishlistScreen",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "WishlistScreenComponent"
+    },
+    {
+        "id": "sd_qX9xTFerz5vdJ6Oy",
+        "type": "OnInit",
+        "z": "sd_QPswhLZbyXfJVlYj",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_qX9xTFerz5vdJ6Oy",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_W0aLjor351CYPLrB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "WishlistScreenComponent"
+    },
+    {
+        "id": "sd_W0aLjor351CYPLrB",
+        "type": "PageVariables",
+        "z": "sd_QPswhLZbyXfJVlYj",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_W0aLjor351CYPLrB",
+        "category": "Function",
+        "x": 195,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "WishlistScreenComponent",
+        "generated": true
+    }
+]

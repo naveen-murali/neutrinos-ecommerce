@@ -1,0 +1,200 @@
+[
+    {
+        "id": "sd_dN8MlsObTh635FSS",
+        "type": "tab",
+        "createdDate": "2022-06-20T06:15:33.081Z",
+        "label": "AuthSignCanActivate",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "canActivate",
+        "generateNext": true,
+        "serviceName": "AuthSignCanActivate",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_2nnzzMMNdG0B0RkV",
+        "type": "CanActivate",
+        "z": "sd_dN8MlsObTh635FSS",
+        "viewType": "client",
+        "nodeType": "start",
+        "name": "Auth Guard",
+        "outputs": 1,
+        "localVariables": [
+            {
+                "key": "status",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "false"
+                },
+                "output": true
+            }
+        ],
+        "functionName": "canActivate",
+        "category": "Navigation",
+        "x": 85,
+        "y": 100,
+        "wires": [
+            [
+                "sd_YR18kOrwiY3ryiYS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "AuthSignCanActivate"
+    },
+    {
+        "id": "sd_YR18kOrwiY3ryiYS",
+        "type": "CallService",
+        "z": "sd_dN8MlsObTh635FSS",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Auth Guard Call Serivce",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LRkQE69DI7XAP8D9",
+            "type": "tab",
+            "createdDate": "2022-06-15T09:08:28.960Z",
+            "label": "AuthService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_AnwjDpS3RjVNQNID",
+            "flowName": "getUserDetails"
+        },
+        "inputVariables": [],
+        "bhVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "userDetails",
+                "valueType": "bh.local",
+                "value": "userDetails",
+                "mapVarName": "userDetails",
+                "localVar": "bh.local.userDetails"
+            }
+        ],
+        "callService": "../sd-services/AuthService",
+        "startName": "getUserDetails",
+        "inputParams": [],
+        "accept_bh": false,
+        "functionName": "authGuardCallSerivce",
+        "category": "General",
+        "x": 205,
+        "y": 100,
+        "wires": [
+            [
+                "sd_VatuwW4wugdwnuBF"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthSignCanActivate",
+        "generated": true
+    },
+    {
+        "id": "sd_VatuwW4wugdwnuBF",
+        "type": "Switch",
+        "z": "sd_dN8MlsObTh635FSS",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Auth Guard Switch",
+        "property": "userDetails",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.userDetails",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "authGuardSwitch",
+        "category": "Function",
+        "x": 325,
+        "y": 100,
+        "wires": [
+            [
+                "sd_qRi4JjLXDwzHvSFh"
+            ],
+            [
+                "sd_qLQcmePqTE9eCBhO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthSignCanActivate",
+        "generated": true
+    },
+    {
+        "id": "sd_qRi4JjLXDwzHvSFh",
+        "type": "Script",
+        "z": "sd_dN8MlsObTh635FSS",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Auth Guard Truthy",
+        "script": "bh.local.status = true;",
+        "functionName": "authGuardTruthy",
+        "category": "Function",
+        "x": 445,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthSignCanActivate",
+        "generated": true
+    },
+    {
+        "id": "sd_qLQcmePqTE9eCBhO",
+        "type": "Script",
+        "z": "sd_dN8MlsObTh635FSS",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Auth Guard False",
+        "script": "bh.local.status = false;",
+        "functionName": "authGuardFalse",
+        "category": "Function",
+        "x": 445,
+        "y": 160,
+        "wires": [
+            [
+                "sd_aMKR8txHTWTRReyC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthSignCanActivate",
+        "generated": true
+    },
+    {
+        "id": "sd_aMKR8txHTWTRReyC",
+        "type": "Navigation",
+        "z": "sd_dN8MlsObTh635FSS",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Navigate to Home",
+        "path": "/home",
+        "functionName": "navigateToHome",
+        "category": "Navigation",
+        "x": 580,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthSignCanActivate",
+        "generated": true
+    }
+]

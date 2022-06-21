@@ -1,0 +1,56 @@
+[
+    {
+        "id": "sd_lhaywRl1aEwP6qkL",
+        "type": "tab",
+        "createdDate": "2022-06-20T10:34:38.266Z",
+        "label": "ProductDetailsScreen",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "ProductDetailsScreenComponent"
+    },
+    {
+        "id": "sd_KDSaLBqZhD015Xoc",
+        "type": "OnInit",
+        "z": "sd_lhaywRl1aEwP6qkL",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_KDSaLBqZhD015Xoc",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_iYJTM5z0ZDecRIPH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ProductDetailsScreenComponent"
+    },
+    {
+        "id": "sd_iYJTM5z0ZDecRIPH",
+        "type": "PageVariables",
+        "z": "sd_lhaywRl1aEwP6qkL",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_iYJTM5z0ZDecRIPH",
+        "category": "Function",
+        "x": 195,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProductDetailsScreenComponent",
+        "generated": true
+    }
+]

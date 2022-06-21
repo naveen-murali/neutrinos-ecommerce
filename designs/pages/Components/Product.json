@@ -43,7 +43,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_p3GsEppgencU5PFU"
+                "sd_PMRJNrd3LiDVU7pw"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -51,22 +51,56 @@
         "serviceName": "ProductComponent"
     },
     {
-        "id": "sd_p3GsEppgencU5PFU",
-        "type": "PageVariables",
+        "id": "sd_PMRJNrd3LiDVU7pw",
+        "type": "PageServiceVariables",
         "z": "sd_RujMaKHpxFUAqkh2",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
         "inputs": 1,
         "outputs": 1,
-        "operation": "set",
-        "globalVariables": [],
-        "functionName": "sd_p3GsEppgencU5PFU",
+        "operation": "get",
+        "globalVariables": [
+            {
+                "textIp": "wishlist",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "wishlist"
+                }
+            }
+        ],
+        "functionName": "sd_PMRJNrd3LiDVU7pw",
+        "service": {
+            "type": "tab",
+            "id": "sd_n4Yv9S5MlM5K5y7B",
+            "disabled": false,
+            "info": "",
+            "label": "WishlistService",
+            "createdDate": "2022-06-20T08:36:27.289Z",
+            "functionSeq": 0,
+            "tabType": "client",
+            "_def": {
+                "defaults": {
+                    "label": {
+                        "value": ""
+                    },
+                    "disabled": {
+                        "value": false
+                    },
+                    "info": {
+                        "value": ""
+                    }
+                }
+            }
+        },
+        "serviceImportPath": "app/sd-services/WishlistService",
         "category": "Function",
-        "x": 185,
+        "x": 165,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_m4r2M53f0AEledHn"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -74,52 +108,17 @@
         "generated": true
     },
     {
-        "id": "sd_YmR7C5MqPpbgH8KV",
-        "type": "PageStart",
+        "id": "sd_m4r2M53f0AEledHn",
+        "type": "Script",
         "z": "sd_RujMaKHpxFUAqkh2",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "Toggle FavIcon",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "toggleFavIcon",
-        "category": "General",
-        "x": 65,
-        "y": 140,
-        "wires": [
-            [
-                "sd_pMaSf9HT11uUWAuU"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "ProductComponent"
-    },
-    {
-        "id": "sd_pMaSf9HT11uUWAuU",
-        "type": "PageVariables",
-        "z": "sd_RujMaKHpxFUAqkh2",
-        "viewType": "pages",
+        "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "inputs": 1,
-        "outputs": 1,
-        "operation": "set",
-        "globalVariables": [
-            {
-                "textIp": "inWishlist",
-                "typedIpValue": {
-                    "type": "literal",
-                    "value": "!this.page.inWishlist"
-                }
-            }
-        ],
-        "functionName": "sd_pMaSf9HT11uUWAuU",
+        "script": "page.inWishlist = \n    page.wishlist.list[this.product._id] ? true : false",
+        "functionName": "sd_m4r2M53f0AEledHn",
         "category": "Function",
-        "x": 190,
-        "y": 140,
+        "x": 265,
+        "y": 40,
         "wires": [
             []
         ],

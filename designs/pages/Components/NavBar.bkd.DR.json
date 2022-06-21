@@ -113,12 +113,18 @@
                 }
             ]
         },
-        "f097e08f-a0a8-ef3f-9909-2c435934572b": {
-            "paletteKey": "NG-MenuButton",
+        "72c2d357-ac02-e63b-b1f4-e437fa6fa3c5": {
+            "paletteKey": "FlexLayoutRow",
             "parentEditorKey": "183f1239-f067-d716-89d5-b5f3c2f3be32",
-            "isCommented": "true",
-            "commentid": "1655283161428",
+            "commentid": null,
             "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "Row",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
                 {
                     "_key": "style",
                     "_value": "",
@@ -132,25 +138,182 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "MenuName",
-                    "_value": "asdfa",
-                    "_type": "a",
-                    "_attrDef": "p",
-                    "_useAsLabel": true
-                },
-                {
-                    "_key": "color",
+                    "_key": "fxFlex",
                     "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "[matMenuTriggerFor]",
-                    "_value": "profileMenu",
+                    "_key": "fxLayoutGap",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
+                },
+                {
+                    "_key": "wrap",
+                    "_value": "wrap",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "layoutAlign",
+                    "_value": "start",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "pLayoutAlign",
+                    "_value": "center",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[fxShow]",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "page.userDetails && page.userDetails.token",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
-            ]
+            ],
+            "0910bfb2-e4cc-c36c-668d-8c89538952e5": {
+                "paletteKey": "NG-icon",
+                "parentEditorKey": "72c2d357-ac02-e63b-b1f4-e437fa6fa3c5",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": [
+                            "mr-1",
+                            "no-selection",
+                            "cursor-pointer"
+                        ],
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "IconName",
+                        "_value": "favorite",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "[inline]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "color",
+                        "_value": "warn",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[matBadge]",
+                        "_value": "page.wishlist.count",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    },
+                    {
+                        "_key": "routerLink",
+                        "_value": "/wishlist",
+                        "_type": "kv",
+                        "_attrDef": "c"
+                    }
+                ]
+            },
+            "21721895-f3e9-a36a-0c7b-8fb303a260b1": {
+                "paletteKey": "NG-icon",
+                "parentEditorKey": "72c2d357-ac02-e63b-b1f4-e437fa6fa3c5",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": [
+                            "mr-1",
+                            "no-selection",
+                            "cursor-pointer"
+                        ],
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "IconName",
+                        "_value": "shopping_cart",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "[inline]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "color",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ]
+            },
+            "f097e08f-a0a8-ef3f-9909-2c435934572b": {
+                "paletteKey": "NG-MenuButton",
+                "parentEditorKey": "72c2d357-ac02-e63b-b1f4-e437fa6fa3c5",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "MenuName",
+                        "_value": "{{ page.userDetails && page.userDetails.name }}",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "color",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[matMenuTriggerFor]",
+                        "_value": "profileMenu",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ]
+            }
         },
         "d1f98f52-6d6c-85a3-25dc-1f105c25c1a2": {
             "paletteKey": "NG-MiniFabButton",
@@ -211,6 +374,12 @@
                     "_value": "/login",
                     "_type": "kv",
                     "_attrDef": "p"
+                },
+                {
+                    "_key": "*ngIf",
+                    "_value": "!(page.userDetails && page.userDetails.token)",
+                    "_type": "kv",
+                    "_attrDef": "c"
                 }
             ]
         }
@@ -295,15 +464,23 @@
                 },
                 {
                     "_key": "MenuItemName",
-                    "_value": "Profile",
+                    "_value": "Logout",
                     "_type": "a",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "(click)",
-                    "_value": "",
+                    "_value": "__serviceInvoker__.invoke('sd_LRkQE69DI7XAP8D9', 'logout')",
                     "_type": "kv",
-                    "_attrDef": "p"
+                    "_attrDef": "p",
+                    "objValue": {
+                        "nodeID": "sd_22ATPDE6PJSqv7Ih",
+                        "functionName": "logout",
+                        "activeTree": "services",
+                        "z": "sd_LRkQE69DI7XAP8D9",
+                        "serviceId": "sd_LRkQE69DI7XAP8D9",
+                        "input": []
+                    }
                 },
                 {
                     "_key": "[disabled]",
@@ -311,7 +488,45 @@
                     "_type": "kv",
                     "_attrDef": "p"
                 }
-            ]
+            ],
+            "9f033134-6fdd-35c1-6d56-c3788f3b7086": {
+                "paletteKey": "NG-icon",
+                "parentEditorKey": "10488f94-3c7c-5b3a-c674-86816f745b3a",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": "",
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "IconName",
+                        "_value": "logout",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "[inline]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "color",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ]
+            }
         }
     }
 }

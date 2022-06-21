@@ -1,0 +1,468 @@
+[
+    {
+        "id": "sd_n4Yv9S5MlM5K5y7B",
+        "type": "tab",
+        "createdDate": "2022-06-20T08:36:27.289Z",
+        "label": "WishlistService",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "WishlistService",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_efTUAhyQzQ2dml7Y",
+        "type": "Start",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Fetch wishlist",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "wishlist",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "this.wishlist || {}"
+                },
+                "output": false
+            },
+            {
+                "key": "wishlistReturn",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "this.wishlist || []"
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "fetchWishlist",
+        "category": "General",
+        "x": 85,
+        "y": 60,
+        "wires": [
+            [
+                "sd_Rh3crJmUdNHe6C4m"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "WishlistService"
+    },
+    {
+        "id": "sd_F5A9C8kBDHRZjWia",
+        "type": "HttpRequest",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "__csd__env__bh.system.environment.properties.WISHLIST_API__csd__env__end",
+        "urlMappingObj": {
+            "mapVarType": "environment",
+            "mapVarValue": "WISHLIST_API"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.wishlist",
+        "resultMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "wishlist"
+        },
+        "headers": [],
+        "headersObj": {},
+        "headerMapping": "bh.headers",
+        "headerMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "headers"
+        },
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_F5A9C8kBDHRZjWia",
+        "category": "HTTP",
+        "x": 545,
+        "y": 60,
+        "wires": [
+            [
+                "sd_BXQBl03FamsOBTRO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "WishlistService",
+        "generated": true
+    },
+    {
+        "id": "sd_g3xbYtWuPhnr35y3",
+        "type": "Script",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Set Header Script",
+        "script": "const token = bh.local.userDetails.token;\nbh.headers = {\n    Authorization: `Bearer ${token}`\n};",
+        "functionName": "setHeaderScript",
+        "category": "Function",
+        "x": 425,
+        "y": 60,
+        "wires": [
+            [
+                "sd_F5A9C8kBDHRZjWia"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "WishlistService",
+        "generated": true
+    },
+    {
+        "id": "sd_0ByxJX7hXeHJcGjn",
+        "type": "CallService",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_LRkQE69DI7XAP8D9",
+            "type": "tab",
+            "createdDate": "2022-06-15T09:08:28.960Z",
+            "label": "AuthService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_AnwjDpS3RjVNQNID",
+            "flowName": "getUserDetails"
+        },
+        "inputVariables": [],
+        "bhVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "userDetails",
+                "valueType": "bh.local",
+                "value": "userDetails",
+                "mapVarName": "userDetails",
+                "localVar": "bh.local.userDetails"
+            }
+        ],
+        "callService": "./AuthService",
+        "startName": "getUserDetails",
+        "inputParams": [],
+        "accept_bh": false,
+        "functionName": "sd_0ByxJX7hXeHJcGjn",
+        "category": "General",
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "sd_g3xbYtWuPhnr35y3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "WishlistService",
+        "generated": true
+    },
+    {
+        "id": "sd_E3N8N1CehMD03fBe",
+        "type": "Start",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Set Wishlist",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "wishlist",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "[]"
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "setWishlist",
+        "category": "General",
+        "x": 85,
+        "y": 300,
+        "wires": [
+            [
+                "sd_esU6mu6WQVkNhzRK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "WishlistService"
+    },
+    {
+        "id": "sd_esU6mu6WQVkNhzRK",
+        "type": "Script",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Set Wishlist Script",
+        "script": "bh.local.wishlist = {\n  count: bh.input.wishlist.length,\n  list: bh.input.wishlist.reduce((acc, value) => {\n    acc[value._id] = value;\n    return acc;\n  }, {})\n}\n",
+        "functionName": "setWishlistScript",
+        "category": "Function",
+        "x": 205,
+        "y": 300,
+        "wires": [
+            [
+                "sd_OtWYOFAm4IYdAz2Z"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "WishlistService",
+        "generated": true
+    },
+    {
+        "id": "sd_OtWYOFAm4IYdAz2Z",
+        "type": "ServiceVariables",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "wishlist",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": "wishlist"
+                }
+            }
+        ],
+        "functionName": "sd_OtWYOFAm4IYdAz2Z",
+        "category": "Function",
+        "x": 345,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "WishlistService",
+        "generated": true
+    },
+    {
+        "id": "sd_BXQBl03FamsOBTRO",
+        "type": "CallService",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_n4Yv9S5MlM5K5y7B",
+            "type": "tab",
+            "createdDate": "2022-06-20T08:36:27.289Z",
+            "label": "WishlistService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_E3N8N1CehMD03fBe",
+            "flowName": "setWishlist"
+        },
+        "inputVariables": [
+            {
+                "key": "wishlist",
+                "map": true,
+                "valueType": "bh",
+                "value": "wishlist"
+            }
+        ],
+        "bhVariables": [],
+        "outputMapping": [],
+        "callService": "./WishlistService",
+        "startName": "setWishlist",
+        "inputParams": [
+            "bh.wishlist"
+        ],
+        "accept_bh": false,
+        "functionName": "sd_BXQBl03FamsOBTRO",
+        "category": "General",
+        "x": 645,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "WishlistService",
+        "generated": true
+    },
+    {
+        "id": "sd_lzMx6z5PUCMbFL07",
+        "type": "Catch",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "selectedNodes": [
+            "sd_efTUAhyQzQ2dml7Y"
+        ],
+        "selectCatchType": "selectednodes",
+        "masternodeList": "",
+        "ignoreList": "",
+        "functionName": "sd_lzMx6z5PUCMbFL07",
+        "category": "General",
+        "x": 85,
+        "y": 160,
+        "wires": [
+            [
+                "sd_Scz1DS1RF0hE12tG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "WishlistService"
+    },
+    {
+        "id": "sd_Scz1DS1RF0hE12tG",
+        "type": "CallService",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_rYc305z7WFjceXh0",
+            "type": "tab",
+            "createdDate": "2022-06-17T10:36:10.296Z",
+            "label": "AlertService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_l5vqWgRi6Zokyk0J",
+            "flowName": "showErrorAlert"
+        },
+        "inputVariables": [
+            {
+                "key": "message",
+                "map": true,
+                "valueType": "bh",
+                "value": "error.error.message"
+            }
+        ],
+        "bhVariables": [],
+        "outputMapping": [],
+        "callService": "./AlertService",
+        "startName": "showErrorAlert",
+        "inputParams": [
+            "bh.error.error.message"
+        ],
+        "accept_bh": false,
+        "functionName": "sd_Scz1DS1RF0hE12tG",
+        "category": "General",
+        "x": 205,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "WishlistService",
+        "generated": true
+    },
+    {
+        "id": "sd_foAXMvz8T4VDr7y9",
+        "type": "Switch",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Chack Wishlist Exists",
+        "property": "wishlist",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.wishlist",
+        "rules": [
+            {
+                "t": "empty"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "chackWishlistExists",
+        "category": "Function",
+        "x": 85,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "WishlistService"
+    },
+    {
+        "id": "sd_Rh3crJmUdNHe6C4m",
+        "type": "ServiceVariables",
+        "z": "sd_n4Yv9S5MlM5K5y7B",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "wishlist",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "{list: {}, counst: 0}"
+                }
+            }
+        ],
+        "functionName": "sd_Rh3crJmUdNHe6C4m",
+        "category": "Function",
+        "x": 205,
+        "y": 60,
+        "wires": [
+            [
+                "sd_0ByxJX7hXeHJcGjn"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "WishlistService",
+        "generated": true
+    }
+]

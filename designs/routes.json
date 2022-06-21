@@ -4,17 +4,29 @@
             "path": "home",
             "component": "HomeScreenComponent",
             "canActivate": {
-                "edited": true,
-                "value": ""
+                "edited": false,
+                "name": "AuthCanActivate"
             },
             "resolve": {
                 "edited": true,
-                "value": "{ products: ProductResolver }"
+                "value": "{ products: ProductResolver, wishlist: WishlistResolver }"
             }
         },
         {
             "path": "login",
-            "component": "LoginScreenComponent"
+            "component": "LoginScreenComponent",
+            "canActivate": {
+                "edited": false,
+                "name": "AuthSignCanActivate"
+            }
+        },
+        {
+            "path": "wishlist",
+            "component": "WishlistScreenComponent",
+            "canActivate": {
+                "edited": false,
+                "name": "AuthCanActivate"
+            }
         },
         {
             "path": "''",

@@ -18,7 +18,7 @@
         "z": "sd_LRkQE69DI7XAP8D9",
         "viewType": "client-server",
         "nodeType": "start",
-        "name": "SignIn",
+        "name": "Sign In Flow",
         "outputs": 1,
         "inputVariables": [
             {
@@ -40,13 +40,13 @@
         ],
         "localVariables": [],
         "accept_bh": false,
-        "functionName": "signIn",
+        "functionName": "signInFlow",
         "category": "General",
         "x": 65,
         "y": 60,
         "wires": [
             [
-                "sd_yktOb0IDECjktcvG"
+                "sd_QExZhaFED4qPVAzM"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -74,7 +74,7 @@
         ],
         "functionName": "sd_TcJF1GMN5ZBj1tq5",
         "category": "Function",
-        "x": 385,
+        "x": 305,
         "y": 60,
         "wires": [
             [
@@ -106,10 +106,10 @@
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
-        "reqBody": "bh.local.userDetails",
+        "reqBody": "bh.input",
         "reqBodyObj": {
-            "mapVarType": "bh.local",
-            "mapVarValue": "userDetails"
+            "mapVarType": "bh",
+            "mapVarValue": "input"
         },
         "resultMapping": "bh.userDetails",
         "resultMappingObj": {
@@ -131,7 +131,7 @@
         "paramMappingObj": {},
         "functionName": "pOSTApi_users",
         "category": "HTTP",
-        "x": 265,
+        "x": 185,
         "y": 60,
         "wires": [
             [
@@ -150,36 +150,14 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(this.userDetails);\nconsole.log(bh)\n\nbh.successMessage = `Hi, ${bh.userDetails.name}`\n",
+        "script": "bh.successMessage = `Hi, ${bh.userDetails.name}`",
         "functionName": "sd_O5jU4FOgoj9zCXTD",
         "category": "Function",
-        "x": 605,
+        "x": 525,
         "y": 60,
         "wires": [
             [
                 "sd_bp5WLsvqZZKMq7oK"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "AuthService",
-        "generated": true
-    },
-    {
-        "id": "sd_yktOb0IDECjktcvG",
-        "type": "Script",
-        "z": "sd_LRkQE69DI7XAP8D9",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.local.userDetails = bh.input\n",
-        "functionName": "sd_yktOb0IDECjktcvG",
-        "category": "Function",
-        "x": 165,
-        "y": 60,
-        "wires": [
-            [
-                "sd_QExZhaFED4qPVAzM"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -202,7 +180,7 @@
         "ignoreList": "",
         "functionName": "signInCatch",
         "category": "General",
-        "x": 265,
+        "x": 185,
         "y": 160,
         "wires": [
             [
@@ -255,7 +233,7 @@
         "accept_bh": false,
         "functionName": "sd_IrWKuju7ikQP6lhY",
         "category": "General",
-        "x": 385,
+        "x": 305,
         "y": 160,
         "wires": [
             []
@@ -307,7 +285,7 @@
         "accept_bh": false,
         "functionName": "sd_bp5WLsvqZZKMq7oK",
         "category": "General",
-        "x": 705,
+        "x": 625,
         "y": 60,
         "wires": [
             [
@@ -325,7 +303,7 @@
         "z": "sd_LRkQE69DI7XAP8D9",
         "viewType": "client-pages",
         "nodeType": "flow",
-        "name": "",
+        "name": "Set User Details Storage",
         "operationType": "setItem",
         "storageType": "localStorage",
         "outputs": 1,
@@ -338,9 +316,9 @@
             "value": "userDetails"
         },
         "resultMapping": {},
-        "functionName": "sd_KfgFtIuCnFNPLgpc",
+        "functionName": "setUserDetailsStorage",
         "category": "Storage",
-        "x": 500,
+        "x": 420,
         "y": 60,
         "wires": [
             [
@@ -362,8 +340,276 @@
         "path": "/home",
         "functionName": "navigateToHome",
         "category": "Navigation",
-        "x": 825,
+        "x": 745,
         "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_AnwjDpS3RjVNQNID",
+        "type": "Start",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Get User Details",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "userDetails",
+                "defaultValue": {
+                    "type": "any",
+                    "value": "this.userDetails || null"
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "getUserDetails",
+        "category": "General",
+        "x": 80,
+        "y": 320,
+        "wires": [
+            [
+                "sd_GBqKEzG83kpS5Jfl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "AuthService"
+    },
+    {
+        "id": "sd_GBqKEzG83kpS5Jfl",
+        "type": "Switch",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Get User Details Switch",
+        "property": "userDetails",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.userDetails",
+        "rules": [
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "getUserDetailsSwitch",
+        "category": "Function",
+        "x": 205,
+        "y": 320,
+        "wires": [
+            [
+                "sd_1pR0dwbw2kizF7K7"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_1pR0dwbw2kizF7K7",
+        "type": "Storage",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Get Details Storage",
+        "operationType": "getItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "bh.local",
+            "value": "userDetails"
+        },
+        "functionName": "getDetailsStorage",
+        "category": "Storage",
+        "x": 345,
+        "y": 320,
+        "wires": [
+            [
+                "sd_RmlM5CACaMvcn0jj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_eAek2qm7Fs4Ei4lY",
+        "type": "ServiceVariables",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "userDetails",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": "userDetails"
+                }
+            }
+        ],
+        "functionName": "sd_eAek2qm7Fs4Ei4lY",
+        "category": "Function",
+        "x": 605,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_22ATPDE6PJSqv7Ih",
+        "type": "Start",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Logout",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "logout",
+        "category": "General",
+        "x": 80,
+        "y": 460,
+        "wires": [
+            [
+                "sd_tNHOuJBthsXqyild"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "AuthService"
+    },
+    {
+        "id": "sd_tNHOuJBthsXqyild",
+        "type": "Storage",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Logout Storage",
+        "operationType": "removeItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {},
+        "resultMapping": {},
+        "functionName": "logoutStorage",
+        "category": "Storage",
+        "x": 205,
+        "y": 460,
+        "wires": [
+            [
+                "sd_BWhcVDoxUmCw3e41"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_BWhcVDoxUmCw3e41",
+        "type": "ServiceVariables",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "userDetails",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "null"
+                }
+            }
+        ],
+        "functionName": "sd_BWhcVDoxUmCw3e41",
+        "category": "Function",
+        "x": 345,
+        "y": 460,
+        "wires": [
+            [
+                "sd_yIiMQnCYcWmCszIC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_RmlM5CACaMvcn0jj",
+        "type": "Switch",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "Check User Details",
+        "property": "userDetails",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.userDetails",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "checkUserDetails",
+        "category": "Function",
+        "x": 485,
+        "y": 320,
+        "wires": [
+            [
+                "sd_eAek2qm7Fs4Ei4lY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "AuthService",
+        "generated": true
+    },
+    {
+        "id": "sd_yIiMQnCYcWmCszIC",
+        "type": "Navigation",
+        "z": "sd_LRkQE69DI7XAP8D9",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/login",
+        "functionName": "sd_yIiMQnCYcWmCszIC",
+        "category": "Navigation",
+        "x": 480,
+        "y": 460,
         "wires": [
             []
         ],

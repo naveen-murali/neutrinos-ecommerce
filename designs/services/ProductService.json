@@ -92,6 +92,7 @@
         "nodeType": "flow",
         "name": "Fetch Products",
         "method": "get",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "__csd__env__bh.system.environment.properties.GET_PRODUCTS_API__csd__env__end",
         "urlMappingObj": {
@@ -99,11 +100,14 @@
             "mapVarValue": "GET_PRODUCTS_API"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
+        "reqBody": "",
         "reqBodyObj": {
             "mapVarType": "bh",
             "mapVarValue": ""
@@ -115,9 +119,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "fetchProducts",
         "category": "HTTP",
@@ -176,21 +182,17 @@
         "propertyGv": "bh.local.productExist",
         "rules": [
             {
-                "t": "true"
-            },
-            {
                 "t": "false"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 2,
+        "outputs": 1,
         "functionName": "checkProductExists",
         "category": "Function",
         "x": 405,
         "y": 60,
         "wires": [
-            [],
             [
                 "sd_sGclF6kqm0mvxwmB"
             ]

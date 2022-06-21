@@ -991,6 +991,7 @@
                         {
                             "_key": "class",
                             "_value": [
+                                "no-selection",
                                 "card-icon",
                                 "icon",
                                 "cursor-pointer"
@@ -1047,6 +1048,7 @@
                         {
                             "_key": "class",
                             "_value": [
+                                "no-selection",
                                 "card-icon",
                                 "cursor-pointer"
                             ],

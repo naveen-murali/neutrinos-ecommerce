@@ -17,7 +17,8 @@
             "NGFORAGE_MOBILE_DRIVER": "client",
             "BASE_URL": "client",
             "GET_PRODUCTS_API": "client",
-            "SIGNIN_API": "client"
+            "SIGNIN_API": "client",
+            "WISHLIST_API": "client"
         }
     },
     "dev": {
@@ -36,9 +37,10 @@
             "webAppMountpoint": "web",
             "CLOCK_TOLERANCE": "5",
             "NGFORAGE_MOBILE_DRIVER": "INDEXED_DB",
-            "BASE_URL": "https://unityshop.shop/api",
-            "GET_PRODUCTS_API": "https://unityshop.shop/api/products",
-            "SIGNIN_API": "http://localhost:3000/api/users/login"
+            "BASE_URL": "http://localhost:3000/api",
+            "GET_PRODUCTS_API": "http://localhost:3000/api/products",
+            "SIGNIN_API": "http://localhost:3000/api/users/login",
+            "WISHLIST_API": "http://localhost:3000/api/users/wishlists"
         }
     },
     "prod": {
@@ -59,7 +61,8 @@
             "NGFORAGE_MOBILE_DRIVER": "INDEXED_DB",
             "BASE_URL": "https://unityshop.shop/api",
             "GET_PRODUCTS_API": "https://unityshop.shop/api/products",
-            "SIGNIN_API": "http://localhost:3000/api/users/login"
+            "SIGNIN_API": "http://localhost:3000/api/users/login",
+            "WISHLIST_API": "http://localhost:3000/api/users/wishlists"
         }
     }
 }
